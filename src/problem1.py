@@ -148,7 +148,21 @@ def run_test_problem1a():
     #   print('Test 1 expected:', expected)
     #   print('       actual:  ', actual)
     # -------------------------------------------------------------------------
+    # Test 1:
+    expected = -1.601  # This is APPROXIMATELY the correct answer.
+    print_expected_result_of_test([3, 5], expected, test_results,
+                                  format_string)
+    actual = problem1a(3, 5)
+    print_actual_result_of_test(expected, actual, test_results, precision=3)
 
+    # Test 2:
+    expected = 1.278  # This is APPROXIMATELY the correct answer.
+    print_expected_result_of_test([30, 100], expected, test_results,
+                                  format_string)
+    actual = problem1a(30, 100)
+    print_actual_result_of_test(expected, actual, test_results, precision=3)
+
+    print_summary_of_test_results(test_results)
 
 def problem1a(m, n):
     """
